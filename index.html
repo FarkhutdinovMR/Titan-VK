@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   <title>Titan</title>
+  <script src="https://unpkg.com/@vkontakte/vk-bridge/dist/browser.min.js"></script>
 </head>
 
 <body style="margin: 0px; overflow: hidden;" oncontextmenu="return false;">
@@ -19,9 +20,9 @@
     const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent);
 
     const settings = {
-      dataUrl: "Build/c1e7d660897ecf00fdd13ae4a9710fd1.data.unityweb",
-      frameworkUrl: "Build/0c3f5bdc8ae025ef6c67da67271db55d.js.unityweb",
-      codeUrl: "Build/b9278a0e5a611cef6c7bc42525357efe.wasm.unityweb",
+      dataUrl: "Build/9ac16d348dc331fb38fdb4489000fa2c.data.unityweb",
+      frameworkUrl: "Build/d48480fd12546f273ed749ed6a6feb79.js.unityweb",
+      codeUrl: "Build/5d1c5187619ef92f509d892fbf899278.wasm.unityweb",
       streamingAssetsUrl: "StreamingAssets",
       companyName: "CrazyGames",
       productName: "Titan",
@@ -39,6 +40,8 @@
     }).catch((message) => {
       alert(message);
     });
+
+    window['vkBridge'].send('VKWebAppInit');
   </script>
 </body>
 
